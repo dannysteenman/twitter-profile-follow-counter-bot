@@ -40,7 +40,7 @@ def main():
                 f'You still have the same amount of followers, no update neccesary: {validate_follower_count(user)} -> {emoji_follower_count(user)}')
         else:
             logger.info(
-                f'You gained new followers, updating twitter profile: {validate_follower_count(user)} -> {emoji_follower_count(user)}')
+                f'Your amount of followers has changed, updating twitter profile: {validate_follower_count(user)} -> {emoji_follower_count(user)}')
             api.update_profile(
                 name=f'insert_your_name|{emoji_follower_count(user)} Followers')
 
