@@ -22,10 +22,9 @@ def emoji_follower_count(user):
 
     follower_count_list = [int(i) for i in str(user.followers_count)]
 
-    emoji_followers = ''.join([emoji_numbers[k]
-                               for k in follower_count_list if k in emoji_numbers.keys()])
-
-    return emoji_followers
+    return ''.join(
+        [emoji_numbers[k] for k in follower_count_list if k in emoji_numbers]
+    )
 
 
 def main():
